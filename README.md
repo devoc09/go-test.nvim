@@ -10,8 +10,10 @@ This plugin is still in development. Currently, it only supports running tests c
 ```lua
 {
   'devoc09/go-test.nvim',
+  -- example keymaps
   keys = {
-    { ',,', function() require('go-test').go_test_buffer() end }, -- example keymap
+    { '<leader>,', function() require('go-test').go_test_package() end },
+    { '<leader>t', function() require('go-test').go_test_all() end },
   },
   ft = {'go'}, -- recommended
 }
